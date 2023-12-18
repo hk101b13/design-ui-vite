@@ -1,4 +1,5 @@
 declare module "design-ui-vite" {
+  import React from "react";
   import { TableProps } from "antd";
   import styled, { Interpolation } from "@emotion/styled";
   import { Theme } from "@emotion/react";
