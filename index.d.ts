@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import { TableProps, SwitchProps } from "antd";
-import { CustomTableProps } from "./Components/QTable";
-import { CustomSwitchProps } from "./Components/QSwitch";
-import { QButtonProps } from "./Components/QButton";
-import { QThemeProviderProps } from "./Components/QThemeProvider";
+import { CustomTableProps } from "./src/Components/QTable";
+import { CustomSwitchProps } from "./src/Components/QSwitch";
+import { QButtonProps } from "./src/Components/QButton";
+import { QThemeProviderProps } from "./src/Components/QThemeProvider";
 
 declare const QTable: (
   props: CustomTableProps & TableProps<any>
