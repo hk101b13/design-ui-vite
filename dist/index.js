@@ -4871,7 +4871,12 @@ const kS = (e) => {
     e[n].includes("!important") ? t[n] = e[n] : t[n] = `${e[n]} !important`;
   }), t;
 }, kv = m.createContext({
-  colorScheme: { text: "", main: "", secondary: "", accent: "" }
+  colorScheme: {
+    text: "#000000",
+    main: "#000000",
+    secondary: "#000000",
+    accent: "#000000"
+  }
 }), Vee = (e) => {
   const t = {
     colorScheme: e.colorScheme,

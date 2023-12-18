@@ -56,30 +56,10 @@ declare module "design-ui-vite" {
     fontFamily?: string;
   }
 
-  export interface ThemeContextType {
-    colorScheme?: {
-      text?: string;
-      main?: string;
-      secondary?: string;
-      accent?: string;
-    };
-    fontSize?: {
-      t1?: number;
-      t2?: number;
-      t3?: number;
-      t4?: number;
-      t5?: number;
-    };
-    size?: "small" | "middle" | "large";
-    locale?: string;
-    fontFamily?: string;
-  }
-
-  const ThemeContext: React.Context<ThemeContextType>;
   const QTable: React.FC<CustomTableProps & TableProps<any>>;
   const QSwitch: React.FC<CustomSwitchProps & SwitchProps>;
   const QButton: React.FC<QButtonProps>;
   const QThemeProvider: React.FC<QThemeProviderProps>;
 
-  export { QTable, QButton, QSwitch, QThemeProvider, ThemeContext };
+  export { QTable, QButton, QSwitch, QThemeProvider };
 }
