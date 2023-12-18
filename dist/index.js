@@ -4870,7 +4870,9 @@ const kS = (e) => {
     }
     e[n].includes("!important") ? t[n] = e[n] : t[n] = `${e[n]} !important`;
   }), t;
-}, kv = m.createContext({}), Vee = (e) => {
+}, kv = m.createContext({
+  colorScheme: { text: "", main: "", secondary: "", accent: "" }
+}), Vee = (e) => {
   const t = {
     colorScheme: e.colorScheme,
     locale: e.locale,

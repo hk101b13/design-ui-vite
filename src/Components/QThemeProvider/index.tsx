@@ -66,7 +66,9 @@ export const AddImportantToStyles = (styles: any) => {
   return importantStyles;
 };
 
-export const ThemeContext = createContext<ThemeContextType>({});
+export const ThemeContext = createContext<ThemeContextType>({
+  colorScheme: { text: "", main: "", secondary: "", accent: "" },
+});
 
 export default (props: QThemeProviderProps) => {
   const contextValue: ThemeContextType = {
