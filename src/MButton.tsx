@@ -1,5 +1,4 @@
-import React, { CSSProperties, ReactNode } from "react";
-import { useContext } from "react";
+import React, { useContext, ReactNode } from "react";
 import styled from "@emotion/styled";
 import { AddImportantToStyles } from "./MThemeProvider";
 import { Interpolation, Theme } from "@emotion/react";

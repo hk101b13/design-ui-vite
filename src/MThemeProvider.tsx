@@ -1,5 +1,4 @@
-import React from "react";
-import { createContext } from "react";
+import React, { createContext } from "react";
 import i18next, { TFunction } from "i18next";
 import { I18nextProvider } from "react-i18next";
 
