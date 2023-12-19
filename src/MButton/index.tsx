@@ -1,10 +1,10 @@
 import React, { useContext, ReactNode } from "react";
 import styled from "@emotion/styled";
-import { AddImportantToStyles } from "./MThemeProvider";
+import { AddImportantToStyles } from "../MThemeProvider";
 import { Interpolation, Theme } from "@emotion/react";
-import { ThemeContext } from "./MThemeProvider";
+import { ThemeContext } from "../MThemeProvider";
 import { Button, ButtonProps } from "antd";
-import MColors from "./Theme/MColors/MColors.json";
+import MColors from "../Theme/MColors/MColors.json";
 
 export interface MButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement> | undefined;

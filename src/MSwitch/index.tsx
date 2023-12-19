@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Switch, SwitchProps } from "antd";
 import styled from "@emotion/styled";
 import { Interpolation, Theme } from "@emotion/react";
-import { ThemeContext } from "./MThemeProvider";
-import { AddImportantToStyles } from "./MThemeProvider";
+import { ThemeContext } from "../MThemeProvider";
+import { AddImportantToStyles } from "../MThemeProvider";
 
 export interface MSwitchProps {
   customStyle?: Interpolation<Theme>;

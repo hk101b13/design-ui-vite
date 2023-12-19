@@ -2,7 +2,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-import * as path from "path";
 
 export default defineConfig({
   plugins: [
@@ -20,7 +19,6 @@ export default defineConfig({
   },
   build: {
     minify: "terser",
-    // minify: false,
     terserOptions: {
       compress: {
         drop_console: true,

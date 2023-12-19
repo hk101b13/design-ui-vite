@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
-    "@mui/material": "^5.15.0",
     "antd": "^5.12.2"
   },
   "devDependencies": {
