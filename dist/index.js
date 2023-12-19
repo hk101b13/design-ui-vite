@@ -53863,25 +53863,23 @@ const Lee = bg(Tv)((e) => {
     qSize: e.qSize,
     children: e.children
   }
-) })), Fee = bg(dQ)(
-  (e) => {
-    const { colorScheme: t } = m.useContext(kv), n = {
-      "&.ant-switch-checked": {
-        backgroundColor: `${(t == null ? void 0 : t.accent) || "pink"} !important`
-      },
-      "&.ant-switch-checked .ant-switch-handle::before": {
-        backgroundColor: `${(t == null ? void 0 : t.main) || "#fff"}!important`
-      },
-      "&.ant-switch-checked .ant-switch-loading-icon": {
-        color: `${(t == null ? void 0 : t.text) || "red"}!important`
-      },
-      "& .ant-wave": {
-        "--wave-color": `${(t == null ? void 0 : t.accent) || "red"} !important`
-      }
-    }, a = kS(e.customStyle);
-    return [n, a];
-  }
-), Kee = (e) => /* @__PURE__ */ zs.jsx(Fee, { ...e });
+) })), Fee = bg(dQ)((e) => {
+  const { colorScheme: t } = m.useContext(kv), n = {
+    "&.ant-switch-checked": {
+      backgroundColor: `${(t == null ? void 0 : t.accent) || "pink"} !important`
+    },
+    "&.ant-switch-checked .ant-switch-handle::before": {
+      backgroundColor: `${(t == null ? void 0 : t.main) || "#fff"}!important`
+    },
+    "&.ant-switch-checked .ant-switch-loading-icon": {
+      color: `${(t == null ? void 0 : t.text) || "red"}!important`
+    },
+    "& .ant-wave": {
+      "--wave-color": `${(t == null ? void 0 : t.accent) || "red"} !important`
+    }
+  }, a = kS(e.customStyle);
+  return [n, a];
+}), Kee = (e) => /* @__PURE__ */ zs.jsx(Fee, { ...e });
 function Aee(e) {
   const { colorScheme: t } = m.useContext(kv);
   let n = {
@@ -53902,38 +53900,36 @@ function Aee(e) {
     textColor: e.textColor || n.textColor
   }), n;
 }
-const zee = bg(Nee)(
-  (e) => {
-    const { colorScheme: t, fontSize: n, fontFamily: a } = m.useContext(kv);
-    let i = Aee(e.tableColor);
-    const u = {
-      color: "white",
-      transition: "all 0.25s ease-in-out ",
-      //   boxShadow: "2px 2px 5px 0px #AFB6B8",
-      borderRadius: "8px",
-      "& .ant-table-cell": {
-        fontFamily: a || "",
-        color: `${i.textColor}`
-      },
-      "& .ant-table-container": {
-        backgroundColor: `${i.rowColor}`
-      },
-      "& .ant-table-cell-row-hover": {
-        backgroundColor: `${i.hoverRowColor} !important`
-      },
-      "& .ant-table-thead .ant-table-cell": {
-        backgroundColor: `${i.headerColor}`
-      },
-      "& .ant-table-thead .ant-table-cell::before": {
-        backgroundColor: "black"
-      },
-      "&&.ant-spin &&.ant-spin-dot-item": { color: "red" },
-      "& th": { fontSize: `${(n == null ? void 0 : n.t3) || 18}px !important` },
-      "& td": { fontSize: `${(n == null ? void 0 : n.t4) || 18}px !important` }
-    }, d = kS(e.customStyle);
-    return [u, d];
-  }
-), Wee = (e) => /* @__PURE__ */ zs.jsx(zs.Fragment, { children: /* @__PURE__ */ zs.jsx("div", { style: { width: "1000px" }, children: /* @__PURE__ */ zs.jsx(
+const zee = bg(Nee)((e) => {
+  const { fontSize: t, fontFamily: n } = m.useContext(kv);
+  let a = Aee(e.tableColor);
+  const i = {
+    color: "white",
+    transition: "all 0.25s ease-in-out ",
+    //   boxShadow: "2px 2px 5px 0px #AFB6B8",
+    borderRadius: "8px",
+    "& .ant-table-cell": {
+      fontFamily: n || "",
+      color: `${a.textColor}`
+    },
+    "& .ant-table-container": {
+      backgroundColor: `${a.rowColor}`
+    },
+    "& .ant-table-cell-row-hover": {
+      backgroundColor: `${a.hoverRowColor} !important`
+    },
+    "& .ant-table-thead .ant-table-cell": {
+      backgroundColor: `${a.headerColor}`
+    },
+    "& .ant-table-thead .ant-table-cell::before": {
+      backgroundColor: "black"
+    },
+    "&&.ant-spin &&.ant-spin-dot-item": { color: "red" },
+    "& th": { fontSize: `${(t == null ? void 0 : t.t3) || 18}px !important` },
+    "& td": { fontSize: `${(t == null ? void 0 : t.t4) || 18}px !important` }
+  }, u = kS(e.customStyle);
+  return [i, u];
+}), Wee = (e) => /* @__PURE__ */ zs.jsx(zs.Fragment, { children: /* @__PURE__ */ zs.jsx("div", { style: { width: "1000px" }, children: /* @__PURE__ */ zs.jsx(
   zee,
   {
     tableColor: e.tableColor,
@@ -53942,9 +53938,9 @@ const zee = bg(Nee)(
   }
 ) }) });
 export {
-  Uee as QButton,
-  pa as QColors,
-  Kee as QSwitch,
-  Wee as QTable,
-  Vee as QThemeProvider
+  Uee as MButton,
+  pa as MColors,
+  Kee as MSwitch,
+  Wee as MTable,
+  Vee as MThemeProvider
 };

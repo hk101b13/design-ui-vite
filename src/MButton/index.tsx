@@ -1,13 +1,13 @@
 import React, { CSSProperties, ReactNode } from "react";
 import { useContext } from "react";
 import styled from "@emotion/styled";
-import { AddImportantToStyles } from "../QThemeProvider";
+import { AddImportantToStyles } from "../MThemeProvider";
 import { Interpolation, Theme } from "@emotion/react";
-import { ThemeContext } from "../QThemeProvider";
+import { ThemeContext } from "../MThemeProvider";
 import { Button, ButtonProps } from "antd";
-import QColors from "../../Theme/QColors/QColors.json";
+import MColors from "../Theme/MColors/MColors.json";
 
-export interface QButtonProps {
+export interface MButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement> | undefined;
   qType?: string;
   qSize?: string;
@@ -21,7 +21,7 @@ export interface QButtonProps {
 }
 
 //hard to connect to component color
-interface ButtonColor {
+interface MButtonColor {
   background: string;
   onHoverBackground: string;
   onActiveWave: string;
@@ -29,11 +29,11 @@ interface ButtonColor {
   shadow: string;
 }
 
-interface ButtonLayout {
+interface MButtonLayout {
   padding: string;
 }
 
-function SetButtonLayout(size: string | undefined): ButtonLayout {
+function SetButtonLayout(size: string | undefined): MButtonLayout {
   let buttonLayout = { padding: "10px 20px" };
   switch (size) {
     case "large":
@@ -49,15 +49,15 @@ function SetButtonLayout(size: string | undefined): ButtonLayout {
   return buttonLayout;
 }
 
-function SetButtonColors(qType?: string): ButtonColor {
+function SetButtonColors(qType?: string): MButtonColor {
   const { colorScheme } = useContext(ThemeContext);
-  let buttonColor: ButtonColor;
+  let buttonColor: MButtonColor;
   buttonColor = {
-    background: QColors.palettes.primary[50],
-    onHoverBackground: QColors.palettes.primary[60],
-    onActiveWave: QColors.schemes.light.primaryFixedDim,
-    text: QColors.schemes.light.onPrimary,
-    shadow: QColors.schemes.light.shadow,
+    background: MColors.palettes.primary[50],
+    onHoverBackground: MColors.palettes.primary[60],
+    onActiveWave: MColors.schemes.light.primaryFixedDim,
+    text: MColors.schemes.light.onPrimary,
+    shadow: MColors.schemes.light.shadow,
   };
 
   if (colorScheme) {
@@ -73,31 +73,31 @@ function SetButtonColors(qType?: string): ButtonColor {
   switch (qType) {
     case "info" || "success":
       buttonColor = {
-        background: QColors.palettes.primary[50],
-        onHoverBackground: QColors.palettes.primary[60],
-        onActiveWave: QColors.schemes.light.primaryFixedDim,
-        text: QColors.schemes.light.onPrimary,
-        shadow: QColors.schemes.light.shadow,
+        background: MColors.palettes.primary[50],
+        onHoverBackground: MColors.palettes.primary[60],
+        onActiveWave: MColors.schemes.light.primaryFixedDim,
+        text: MColors.schemes.light.onPrimary,
+        shadow: MColors.schemes.light.shadow,
       };
       break;
 
     case "warning":
       buttonColor = {
-        background: QColors.palettes.warning[50],
-        onHoverBackground: QColors.palettes.warning[60],
-        onActiveWave: QColors.schemes.light.warningFixedDim,
-        text: QColors.schemes.light.onWarning,
-        shadow: QColors.schemes.light.shadow,
+        background: MColors.palettes.warning[50],
+        onHoverBackground: MColors.palettes.warning[60],
+        onActiveWave: MColors.schemes.light.warningFixedDim,
+        text: MColors.schemes.light.onWarning,
+        shadow: MColors.schemes.light.shadow,
       };
       break;
 
     case "error":
       buttonColor = {
-        background: QColors.palettes.error[50],
-        onHoverBackground: QColors.palettes.error[60],
-        onActiveWave: QColors.schemes.light.errorFixedDim,
-        text: QColors.schemes.light.onError,
-        shadow: QColors.schemes.light.shadow,
+        background: MColors.palettes.error[50],
+        onHoverBackground: MColors.palettes.error[60],
+        onActiveWave: MColors.schemes.light.errorFixedDim,
+        text: MColors.schemes.light.onError,
+        shadow: MColors.schemes.light.shadow,
       };
       break;
   }
@@ -142,7 +142,7 @@ const StyledButton = styled(Button)<
   return [baseStyles, importantCustomStyles];
 });
 
-export default React.forwardRef<any, QButtonProps>((props, ref) => {
+export default React.forwardRef<any, MButtonProps>((props, ref) => {
   return (
     <div>
       <StyledButton

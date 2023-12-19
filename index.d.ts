@@ -6,23 +6,23 @@ declare module "design-ui-vite" {
   import { SwitchProps } from "antd";
   import { ReactNode } from "react";
 
-  export interface TableColor {
+  export interface MTableColor {
     headerColor?: string;
     rowColor?: string;
     hoverRowColor?: string;
     textColor?: string;
   }
 
-  export interface CustomTableProps {
+  export interface MTableProps {
     customStyle?: Interpolation<Theme>;
-    tableColor?: TableColor;
+    tableColor?: MTableColor;
   }
 
-  export interface CustomSwitchProps {
+  export interface MSwitchProps {
     customStyle?: Interpolation<Theme>;
   }
 
-  export interface QButtonProps {
+  export interface MButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement> | undefined;
     qType?: string;
     qSize?: string;
@@ -35,7 +35,7 @@ declare module "design-ui-vite" {
     customStyle?: Interpolation<Theme>;
   }
 
-  export interface QThemeProviderProps {
+  export interface MThemeProviderProps {
     colorScheme?: {
       text?: string;
       main?: string;
@@ -56,10 +56,10 @@ declare module "design-ui-vite" {
     fontFamily?: string;
   }
 
-  const QTable: React.FC<CustomTableProps & TableProps<any>>;
-  const QSwitch: React.FC<CustomSwitchProps & SwitchProps>;
-  const QButton: React.FC<QButtonProps>;
-  const QThemeProvider: React.FC<QThemeProviderProps>;
+  const QTable: React.FC<MTableProps & TableProps<any>>;
+  const QSwitch: React.FC<MSwitchProps & SwitchProps>;
+  const QButton: React.FC<MButtonProps>;
+  const QThemeProvider: React.FC<MThemeProviderProps>;
 
   export { QTable, QButton, QSwitch, QThemeProvider };
 }

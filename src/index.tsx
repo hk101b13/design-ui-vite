@@ -1,7 +1,7 @@
-import QButton from "./Components/QButton";
-import QSwitch from "./Components/QSwitch";
-import QThemeProvider from "./Components/QThemeProvider";
-import QColors from "./Theme/QColors/QColors.json";
-import QTable from "./Components/QTable";
+import MButton from "./MButton";
+import MSwitch from "./MSwitch";
+import MThemeProvider from "./MThemeProvider";
+import MColors from "./Theme/MColors/MColors.json";
+import MTable from "./MTable";
 
-export { QButton, QSwitch, QThemeProvider, QColors, QTable };
+export { MButton, MSwitch, MThemeProvider, MColors, MTable };

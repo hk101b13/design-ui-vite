@@ -1,10 +1,8 @@
-import React from "react";
 import { createContext } from "react";
 import i18next, { TFunction } from "i18next";
-import { Interpolation, Theme } from "@emotion/react";
 import { I18nextProvider } from "react-i18next";
 
-interface ThemeContextType {
+interface MThemeContextType {
   colorScheme?: {
     text?: string;
     main?: string;
@@ -24,7 +22,7 @@ interface ThemeContextType {
   t?: TFunction;
 }
 
-export interface QThemeProviderProps {
+export interface MThemeProviderProps {
   colorScheme?: {
     text?: string;
     main?: string;
@@ -66,7 +64,7 @@ export const AddImportantToStyles = (styles: any) => {
   return importantStyles;
 };
 
-export const ThemeContext = createContext<ThemeContextType>({
+export const ThemeContext = createContext<MThemeContextType>({
   colorScheme: {
     text: "#000000",
     main: "#000000",
@@ -75,8 +73,8 @@ export const ThemeContext = createContext<ThemeContextType>({
   },
 });
 
-export default (props: QThemeProviderProps) => {
-  const contextValue: ThemeContextType = {
+export default (props: MThemeProviderProps) => {
+  const contextValue: MThemeContextType = {
     colorScheme: props.colorScheme,
     locale: props.locale,
     size: props.size,
