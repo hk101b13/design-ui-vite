@@ -56,10 +56,10 @@ declare module "design-ui-vite" {
     fontFamily?: string;
   }
 
-  const QTable: React.FC<MTableProps & TableProps<any>>;
-  const QSwitch: React.FC<MSwitchProps & SwitchProps>;
-  const QButton: React.FC<MButtonProps>;
-  const QThemeProvider: React.FC<MThemeProviderProps>;
+  const MTable: React.FC<MTableProps & TableProps<any>>;
+  const MSwitch: React.FC<MSwitchProps & SwitchProps>;
+  const MButton: React.FC<MButtonProps>;
+  const MThemeProvider: React.FC<MThemeProviderProps>;
 
-  export { QTable, QButton, QSwitch, QThemeProvider };
+  export { MTable, MSwitch, MButton, MThemeProvider };
 }
