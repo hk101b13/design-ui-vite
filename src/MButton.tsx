@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactNode } from "react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import styled from "@emotion/styled";
 import { AddImportantToStyles } from "./MThemeProvider";
 import { Interpolation, Theme } from "@emotion/react";
@@ -115,10 +115,6 @@ const StyledButton = styled(Button)<
   let buttonColor = SetButtonColors(props.qType);
   let buttonLayout = SetButtonLayout(size || props.qSize);
 
-  useEffect(() => {
-    console.log("ThemeContext in StyledButton:", useContext(ThemeContext));
-  }, []);
-
   const baseStyles = {
     width: "auto",
     height: "auto",
@@ -147,10 +143,6 @@ const StyledButton = styled(Button)<
 });
 
 export const MButton = React.forwardRef<any, MButtonProps>((props, ref) => {
-  useEffect(() => {
-    console.log("ThemeContext in MButton:", useContext(ThemeContext));
-  }, []);
-
   return (
     <div>
       <StyledButton

@@ -32,5 +32,4 @@ export default defineConfig({
       },
     },
   },
-  resolve: { alias: { "design-ui-vite": path.resolve(__dirname, "src") } },
 });
