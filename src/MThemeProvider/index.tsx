@@ -66,12 +66,11 @@ export const AddImportantToStyles = (styles: any) => {
 };
 
 export const ThemeContext = createContext<MThemeContextType>({
-  colorScheme: {
-    text: "#000000",
-    main: "#000000",
-    secondary: "#000000",
-    accent: "#000000",
-  },
+  colorScheme: {},
+  locale: "",
+  size: "middle",
+  fontSize: {},
+  fontFamily: "",
 });
 
 export default (props: MThemeProviderProps) => {
