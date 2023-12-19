@@ -56,10 +56,15 @@ declare module "design-ui-vite" {
     fontFamily?: string;
   }
 
+  export interface MCowsayProps {
+    content?: string;
+  }
+
   const MTable: React.FC<MTableProps & TableProps<any>>;
   const MSwitch: React.FC<MSwitchProps & SwitchProps>;
   const MButton: React.FC<MButtonProps>;
   const MThemeProvider: React.FC<MThemeProviderProps>;
+  const MCowsay: React.FC<MCowsayProps>;
 
-  export { MTable, MSwitch, MButton, MThemeProvider };
+  export { MTable, MSwitch, MButton, MThemeProvider, MCowsay };
 }
