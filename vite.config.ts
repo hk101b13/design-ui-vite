@@ -18,6 +18,11 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
   },
+  resolve: {
+    alias: {
+      react: path.resolve("./node_modules/react"),
+    },
+  },
   build: {
     minify: "terser",
     // minify: false,

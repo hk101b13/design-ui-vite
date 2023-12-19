@@ -61,13 +61,13 @@ devDependencies:
     version: 0.12.7
   react:
     specifier: ^18.2.0
-    version: 18.2.0
+    version: link:node_modules/react
   react-bootstrap:
     specifier: ^2.9.1
     version: 2.9.1(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
-    version: 18.2.0(react@18.2.0)
+    version: link:node_modules/react-dom
   react-i18next:
     specifier: ^13.5.0
     version: 13.5.0(i18next@23.7.11)(react-dom@18.2.0)(react@18.2.0)
