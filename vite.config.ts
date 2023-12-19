@@ -19,10 +19,19 @@ export default defineConfig({
     host: "0.0.0.0",
   },
   build: {
+    minify: "terser",
+    // minify: false,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    target: ["esnext"],
+
     lib: {
       name: "design-ui-vite",
       entry: "./src/index",
-      formats: ["es"],
       fileName: () => "index.js",
     },
     rollupOptions: {
