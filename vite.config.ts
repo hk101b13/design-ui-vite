@@ -18,11 +18,6 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
   },
-  resolve: {
-    alias: {
-      react: path.resolve("./node_modules/react"),
-    },
-  },
   build: {
     minify: "terser",
     // minify: false,
@@ -40,10 +35,14 @@ export default defineConfig({
       fileName: () => "index.js",
     },
     rollupOptions: {
+      external: ["react", "react-dom"],
       input: "./src",
       output: {
         dir: "./dist",
       },
     },
+  },
+  resolve: {
+    dedupe: ["react", "react-dom"],
   },
 });

@@ -54,9 +54,5 @@
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0"
-  },
-  "resolutions": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }
