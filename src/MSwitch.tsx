@@ -3,8 +3,8 @@ import { Switch, SwitchProps } from "antd";
 import styled from "@emotion/styled";
 import { Interpolation, Theme } from "@emotion/react";
 import { useContext } from "react";
-import { ThemeContext } from "../MThemeProvider";
-import { AddImportantToStyles } from "../MThemeProvider";
+import { ThemeContext } from "./MThemeProvider";
+import { AddImportantToStyles } from "./MThemeProvider";
 
 export interface MSwitchProps {
   customStyle?: Interpolation<Theme>;
@@ -31,6 +31,6 @@ const StyledSwitch = styled(Switch)((props: MSwitchProps & SwitchProps) => {
   return [baseStyle, importantCustomStyle];
 });
 
-export default (props: SwitchProps & MSwitchProps) => {
+export const MSwitch = (props: SwitchProps & MSwitchProps) => {
   return <StyledSwitch {...props} />;
 };

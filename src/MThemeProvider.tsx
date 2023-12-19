@@ -73,7 +73,7 @@ export const ThemeContext = createContext<MThemeContextType>({
   fontFamily: "",
 });
 
-export default (props: MThemeProviderProps) => {
+export const MThemeProvider = (props: MThemeProviderProps) => {
   const contextValue: MThemeContextType = {
     colorScheme: props.colorScheme,
     locale: props.locale,

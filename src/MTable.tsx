@@ -2,9 +2,9 @@ import React from "react";
 import { Table, TableProps } from "antd";
 import styled, { Interpolation } from "@emotion/styled";
 import { Theme } from "@emotion/react";
-import { ThemeContext, AddImportantToStyles } from "../MThemeProvider";
+import { ThemeContext, AddImportantToStyles } from "./MThemeProvider";
 import { useContext } from "react";
-import MColors from "../Theme/MColors/MColors.json";
+import MColors from "./Theme/MColors/MColors.json";
 
 export interface TableColor {
   headerColor?: string;
@@ -78,7 +78,7 @@ const StyledTable = styled(Table)((props: MTableProps & TableProps<any>) => {
   return [baseStyle, importantCustomStyle];
 });
 
-export default (props: MTableProps & TableProps<any>) => {
+export const MTable = (props: MTableProps & TableProps<any>) => {
   return (
     <>
       <div style={{ width: "1000px" }}>

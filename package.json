@@ -20,7 +20,8 @@
     "i18next": "^23.7.11",
     "react-bootstrap": "^2.9.1",
     "vite-plugin-css-injected-by-js": "^3.3.0",
-    "@vitejs/plugin-legacy": "^4.0.2"
+    "@vitejs/plugin-legacy": "^4.0.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import * as path from "path";
 
 export default defineConfig({
   plugins: [
@@ -20,7 +21,7 @@ export default defineConfig({
   build: {
     lib: {
       name: "design-ui-vite",
-      entry: "./src/index.tsx",
+      entry: "./src/index",
       formats: ["es"],
       fileName: () => "index.js",
     },
@@ -31,4 +32,5 @@ export default defineConfig({
       },
     },
   },
+  resolve: { alias: { "design-ui-vite": path.resolve(__dirname, "src") } },
 });
