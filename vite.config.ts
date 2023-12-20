@@ -6,13 +6,13 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
   plugins: [
     react(),
-    cssInjectedByJsPlugin({
-      jsAssetsFilterFunction: function customJsAssetsfilterFunction(
-        outputChunk
-      ) {
-        return outputChunk.fileName == "index.js";
-      },
-    }),
+    // cssInjectedByJsPlugin({
+    //   jsAssetsFilterFunction: function customJsAssetsfilterFunction(
+    //     outputChunk
+    //   ) {
+    //     return outputChunk.fileName == "index.js";
+    //   },
+    // }),
   ],
   server: {
     host: "0.0.0.0",
@@ -26,11 +26,10 @@ export default defineConfig({
       },
     },
     target: ["esnext"],
-
     lib: {
       name: "design-ui-vite",
       entry: "./src/index",
-      fileName: () => "index.js",
+      // fileName: () => "index.js",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
