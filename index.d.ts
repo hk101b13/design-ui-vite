@@ -6,17 +6,17 @@ declare module "design-ui-vite" {
   import { SwitchProps } from "antd";
   import { ReactNode } from "react";
 
-  export interface MTableColor {
-    headerColor?: string;
-    rowColor?: string;
-    hoverRowColor?: string;
-    textColor?: string;
-  }
+  // export interface MTableColor {
+  //   headerColor?: string;
+  //   rowColor?: string;
+  //   hoverRowColor?: string;
+  //   textColor?: string;
+  // }
 
-  export interface MTableProps {
-    customStyle?: Interpolation<Theme>;
-    tableColor?: MTableColor;
-  }
+  // export interface MTableProps {
+  //   customStyle?: Interpolation<Theme>;
+  //   tableColor?: MTableColor;
+  // }
 
   export interface MSwitchProps {
     customStyle?: Interpolation<Theme>;
@@ -60,11 +60,11 @@ declare module "design-ui-vite" {
     content?: string;
   }
 
-  const MTable: React.FC<MTableProps & TableProps<any>>;
+  // const MTable: React.FC<MTableProps & TableProps<any>>;
   const MSwitch: React.FC<MSwitchProps & SwitchProps>;
   const MButton: React.FC<MButtonProps>;
   const MThemeProvider: React.FC<MThemeProviderProps>;
   const MCowsay: React.FC<MCowsayProps>;
 
-  export { MTable, MSwitch, MButton, MThemeProvider, MCowsay };
+  export { MSwitch, MButton, MThemeProvider, MCowsay };
 }
